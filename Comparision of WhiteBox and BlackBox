@@ -1,0 +1,47 @@
+
+BlackBox
+
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ flatten (Flatten)           (32, 784)                 0         
+                                                                 
+ dense (Dense)               (32, 128)                 100480    
+                                                                 
+ dense_1 (Dense)             (32, 128)                 16512     
+                                                                 
+ dense_2 (Dense)             (32, 10)                  1290      
+                                                                 
+=================================================================
+Total params: 118,282
+Trainable params: 118,282
+Non-trainable params: 0
+
+
+Accuracy Score : 0.9989 Epochs : 20
+
+
+WhiteBox
+
+Model : 'sequential'
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ 
+ dense (Dense)             (32 , 784)
+ 
+ dense_1 (Dense)           (32 , 128)
+ 
+ dense_2 (Dense)           (32 , 10)
+=================================================================
+
+
+Accuracy Score : 0.91  Epochs : 800
+
+
+Explanation 
+BlackBox Model is having really good accuracy with a really small number of epochs when compared with the white box.
+This is because Black-box models such as neural networks, gradient boosting models or complicated ensembles often provide great accuracy.
+The inner workings of these models are harder to understand and have nearly a million parameters per layer.
+Hence , the BlackBox is better than the WhiteBox.
